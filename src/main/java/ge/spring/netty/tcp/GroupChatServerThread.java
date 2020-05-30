@@ -24,15 +24,15 @@ public class GroupChatServerThread implements Runnable{
     GroupChatBean groupChatBean;
 
     private int port = 8888;
-    private Thread nserver;
+    private Thread thread;
 
     public GroupChatServerThread(){
     }
 
     @PostConstruct
     public void init() {
-        nserver = new Thread(this);
-        nserver.start();
+        thread = new Thread(this);
+        thread.start();
     }
 
     public void run(){

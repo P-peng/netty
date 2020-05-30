@@ -24,6 +24,11 @@ public class GroupChatServerHandelThread extends SimpleChannelInboundHandler<Str
 
     public Map<String, Channel> channels;
 
+    /**
+     * 需要操作，在构造方法注入 bean
+     *
+     * @param channels
+     */
     public GroupChatServerHandelThread(Map<String, Channel> channels){
         this.channels = channels;
     }
