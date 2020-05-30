@@ -44,6 +44,7 @@ public class GroupChatServerThread implements Runnable{
 
         try {
             bootstrap.group(boosGroup, workGroup)
+                    // 通道采用 nio 类型
                     .channel(NioServerSocketChannel.class)
                     .option(ChannelOption.SO_BACKLOG, 128)
                     // 保持长连接
