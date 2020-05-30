@@ -123,7 +123,7 @@ public class GroupChatServerHandelThread extends SimpleChannelInboundHandler<Str
             }
         });
 
-        // 把数据塞入队列的处理 塞入数据库？
+        // todo 把数据塞入队列的处理 塞入数据库？
         System.out.println(Thread.currentThread().getName());
 
     }
