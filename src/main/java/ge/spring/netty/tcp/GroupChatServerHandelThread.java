@@ -22,7 +22,7 @@ public class GroupChatServerHandelThread extends SimpleChannelInboundHandler<Str
 //    private static List<Channel> channels = new ArrayList<Channel>();
 
 
-    public Map<String, Channel> channels;
+    private Map<String, Channel> channels;
 
     /**
      * 需要操作，在构造方法注入 bean
@@ -36,7 +36,7 @@ public class GroupChatServerHandelThread extends SimpleChannelInboundHandler<Str
 
     // 定义一个chnnel组，管理channel
     // GlobalEventExecutor.INSTANCE 是全局的事件执行器，单例模式
-    public static ChannelGroup channelsGroup = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
+    private static ChannelGroup channelsGroup = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
